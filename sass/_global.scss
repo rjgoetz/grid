@@ -1,0 +1,81 @@
+/*
+General Styles
+*/
+
+
+// Variables
+$blue: #6DAFE1;
+
+
+// Base & Helpers
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+html {
+  font-size: $base-font-size+px;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: inherit;
+  line-height: $base-line-height;
+  margin-top: $base-line-height*2em - $offset;
+}
+
+article {
+  // padding-top: $base-line-height*1em - $offset;
+}
+
+h1, h2, h3, ul, p {
+  margin: 0;
+}
+
+h1 {
+  @include baseline((36/$base-font-size));
+}
+
+h2 {
+  @include baseline((24/$base-font-size));
+}
+
+h3 {
+  @include baseline(1);
+}
+
+p {
+  @include baseline(1);
+}
+
+ul {
+  @include baseline(1);
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  // @include baseline(1);
+}
+
+// Layout
+
+// Modules
+.box {
+  background-color: $blue;
+  height: 200px;
+}
+
+.page-nav {
+  li {
+    display: inline-block;
+    margin-right: 1em;
+  }
+}

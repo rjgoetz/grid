@@ -1,0 +1,74 @@
+/*
+RJ's Grid System
+v1.0
+*/
+
+
+// Layout
+$pad: 18px;
+
+.container {
+  padding-left: $pad;
+  padding-right: $pad;
+}
+
+.row {
+  @extend .clearfix;
+  margin-left: -$pad;
+  margin-right: -$pad;
+}
+
+div[class*="col-"] {
+  float: left;
+  padding-left: $pad;
+  padding-right: $pad;
+}
+
+// Grid
+.col-sm-1 {
+  width: (1/12)*100%;
+}
+
+.col-sm-2 {
+  width: (2/12)*100%;
+}
+
+.col-sm-3 {
+  width: (3/12)*100%;
+}
+
+.col-sm-4 {
+  width: (4/12)*100%;
+}
+
+.col-sm-5 {
+  width: (5/12)*100%;
+}
+
+.col-sm-6 {
+  width: (6/12)*100%;
+}
+
+.col-sm-7 {
+  width: (7/12)*100%;
+}
+
+.col-sm-8 {
+  width: (8/12)*100%;
+}
+
+.col-sm-9 {
+  width: (9/12)*100%;
+}
+
+.col-sm-10 {
+  width: (10/12)*100%;
+}
+
+.col-sm-11 {
+  width: (11/12)*100%;
+}
+
+.col-sm-12 {
+  width: 100%;
+}

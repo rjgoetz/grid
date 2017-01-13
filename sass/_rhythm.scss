@@ -1,0 +1,35 @@
+// Rhythm Calculation
+
+$base-font-size: 16;
+$base-line-height: 1.4;
+$cap-height: 0.62;
+$offset: ($base-line-height - $cap-height) / 2;
+
+@mixin baseline($font-size) {
+
+  // number of baselines
+  $lines: ceil($font-size / $base-line-height);
+
+  // calculate new line-height
+  $line-height: $base-line-height * $lines / $font-size;
+
+  // add font-size and line-height to css
+  font-size: $font-size+em;
+  line-height: $line-height;
+
+  // calculate baseline offset
+  $offset: ($line-height - $cap-height) / 2;
+
+  margin-top: $offset+em;
+  margin-bottom: -$offset+em;
+
+}
+
+@mixin margin($top, $bottom) {
+
+  // determine postive / negative margins for layout elements
+  $offset: ($base-line-height - $cap-height) / 2;
+
+  margin-bottom: ($bottom * $base-line-height - $offset)+em;
+  margin-top: ($top * $base-line-height - $offset)+em;
+}
