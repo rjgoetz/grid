@@ -1,4 +1,16 @@
-// Rhythm Calculation
+/*
+Vertical Rhythm
+*** This method uses top and bottom margins to adjust type down to the baseline. Use the padding() mixin to add whitespace between elements.
+*/
+
+/*
+Instructions:
+1) Set base font size
+2) Determine base line-height
+3) Find cap height of body and headline fonts (map by size).
+4) When setting font-size for the element, call baseline() mixin:
+   Example: @include baseline((target font size/$base-font-size), 'sm');
+*/
 
 $base-font-size: 16;
 $base-line-height: 1.5;
@@ -25,9 +37,4 @@ $cap-height: (
   margin-bottom: -$offset+em;
   margin-top: $offset+em;
 
-}
-
-@mixin padding($top, $bottom) {
-  padding-bottom: ($bottom * $base-line-height)+rem;
-  padding-top: ($top * $base-line-height)+rem;
 }

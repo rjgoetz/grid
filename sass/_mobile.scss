@@ -1,0 +1,64 @@
+/*
+Mobile Styles
+*/
+
+
+// Base
+html {
+  font-size: $base-font-size+px;
+}
+
+body {
+  font-family: $base-font-stack;
+  font-size: inherit;
+  line-height: $base-line-height;
+}
+
+h1, h2, ul, p {
+  margin: 0;
+  @include padding(0, 1);
+}
+
+h1 {
+  @include baseline((48/$base-font-size), 'lg');
+}
+
+h2 {
+  @include baseline((24/$base-font-size), 'lg');
+}
+
+h3 {
+  margin: 0;
+  @include baseline(1, 'sm');
+}
+
+p {
+  @include baseline(1, 'sm');
+}
+
+ul {
+  @include baseline(1, 'sm');
+  list-style-type: none;
+  padding-left: 0;
+}
+
+a {
+  color: orange;
+  text-decoration: none;
+}
+
+// Modules
+.box {
+  background-color: $blue;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+  min-height: $base-line-height*5em;
+}
+
+.page-nav {
+  @extend .clearfix;
+  li {
+    display: inline-block;
+    margin-right: 1em;
+  }
+}

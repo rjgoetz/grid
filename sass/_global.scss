@@ -1,9 +1,8 @@
 /*
-General Styles
+Global Helper & Layout Classes
 */
 
 
-// Base & Helpers
 *, *:after, *:before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -16,48 +15,11 @@ General Styles
   clear: both;
 }
 
-html {
-  font-size: $base-font-size+px;
+@mixin padding($top, $bottom) {
+  padding-bottom: ($bottom * $base-line-height)+rem;
+  padding-top: ($top * $base-line-height)+rem;
 }
 
-body {
-  font-family: "Source Sans Pro";
-  font-size: inherit;
-  line-height: $base-line-height;
-}
-
-h1, h2, ul, p {
-  margin: 0;
-  @include padding(0, 1);
-}
-
-h1 {
-  @include baseline((48/$base-font-size), 'lg');
-}
-
-h2 {
-  @include baseline((24/$base-font-size), 'lg');
-}
-
-h3 {
-  margin: 0;
-  @include baseline(1, 'sm');
-}
-
-p {
-  @include baseline(1, 'sm');
-}
-
-ul {
-  @include baseline(1, 'sm');
-  list-style-type: none;
-  padding-left: 0;
-}
-
-a {
-  color: orange;
-  text-decoration: none;
-}
 
 // Layout
 .l-pad-top {
@@ -78,22 +40,5 @@ a {
 
 .l-list-bullets {
   list-style-type: circle;
-  padding-left: 2em;
-}
-
-
-// Modules
-.box {
-  background-color: $blue;
-  border-bottom: 1px solid black;
-  border-top: 1px solid black;
-  min-height: $base-line-height*5em;
-}
-
-.page-nav {
-  @extend .clearfix;
-  li {
-    display: inline-block;
-    margin-right: 1em;
-  }
+  padding-left: $pad;
 }
