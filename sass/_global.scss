@@ -3,10 +3,6 @@ General Styles
 */
 
 
-// Variables
-$blue: #6DAFE1;
-
-
 // Base & Helpers
 *, *:after, *:before {
   -webkit-box-sizing: border-box;
@@ -22,7 +18,6 @@ $blue: #6DAFE1;
 
 html {
   font-size: $base-font-size+px;
-  box-sizing: border-box;
 }
 
 body {
